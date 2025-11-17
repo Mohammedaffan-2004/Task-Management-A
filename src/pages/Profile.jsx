@@ -55,13 +55,13 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0B0C10] via-[#111827] to-[#1E2233] text-gray-200 relative overflow-hidden px-6 py-10">
-      {/* Ambient glow background */}
+      
       <div className="absolute w-[500px] h-[500px] bg-[#3B82F6]/20 blur-[130px] rounded-full top-[-80px] left-[-100px]" />
       <div className="absolute w-[400px] h-[400px] bg-[#06B6D4]/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
 
-      {/* Card */}
+      
       <div className="relative z-10 bg-gradient-to-br from-[#0F172A]/90 via-[#1E253F]/85 to-[#111827]/90 backdrop-blur-2xl border border-[#1E253F]/70 rounded-2xl shadow-[0_8px_32px_rgba(59,130,246,0.25)] w-full max-w-md p-8 transition-all text-gray-200">
-        {/* Header */}
+        
         <div className="flex flex-col items-center mb-8">
           <div className="relative w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-br from-[#3B82F6]/20 to-[#06B6D4]/10 border border-[#3B82F6]/30 shadow-[0_0_25px_rgba(59,130,246,0.3)] mb-3">
             <User size={42} className="text-[#60A5FA]" />
@@ -71,7 +71,7 @@ const Profile = () => {
           <p className="text-gray-400 text-sm mt-1">Manage your account information</p>
         </div>
 
-        {/* Profile Info */}
+        
         {!editing ? (
           <div className="space-y-5">
             <div>
@@ -106,7 +106,7 @@ const Profile = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Name */}
+           
             <div>
               <label className="block text-sm text-gray-400 mb-1">Name</label>
               <input
@@ -117,7 +117,7 @@ const Profile = () => {
               />
             </div>
 
-            {/* Password */}
+           
             <div>
               <label className="block text-sm text-gray-400 mb-1">New Password</label>
               <input
@@ -130,7 +130,7 @@ const Profile = () => {
               />
             </div>
 
-            {/* Buttons */}
+           
             <div className="flex justify-end space-x-3 pt-3">
               <button
                 type="button"
@@ -150,7 +150,7 @@ const Profile = () => {
         )}
       </div>
 
-      {/* Glow animation styles */}
+     
       <style>{`
         @keyframes pulse-slow {
           0%, 100% { opacity: 0.8; transform: scale(1); }

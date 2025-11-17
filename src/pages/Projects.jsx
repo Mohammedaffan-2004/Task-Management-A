@@ -557,96 +557,118 @@ const Projects = () => {
       )}
 
       {/* Modals - Responsive */}
-      <dialog
-        id="createProjectModal"
-        className="backdrop:bg-black/60 backdrop-blur-sm p-0 rounded-2xl border border-[#1E253F]/70 bg-gradient-to-br from-[#0F172A]/95 via-[#111827]/90 to-[#0B1120]/90 text-gray-200 w-[90vw] max-w-md"
-      >
-        <form onSubmit={handleCreateProject} className="p-4 sm:p-6 space-y-4 sm:space-y-5">
-          <h3 className="text-base sm:text-lg font-semibold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
-            Create New Project
-          </h3>
-          <input
-            name="title"
-            placeholder="Project Title"
-            value={form.title}
-            onChange={(e) => setForm({ ...form, title: e.target.value })}
-            className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
-          />
-          <textarea
-            name="description"
-            placeholder="Description"
-            value={form.description}
-            onChange={(e) => setForm({ ...form, description: e.target.value })}
-            className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
-            rows={3}
-          />
-          <div className="flex justify-end gap-3 pt-2">
-            <button
-              type="button"
-              onClick={() =>
-                document.getElementById("createProjectModal").close()
-              }
-              className="cursor-pointer px-4 py-2 rounded-lg text-sm text-gray-400 border border-[#2D3250] hover:bg-[#1E253F]/70 transition-all"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="cursor-pointer px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:opacity-90 shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition-all"
-            >
-              Create
-            </button>
-          </div>
-        </form>
-      </dialog>
+     {/* Create Modal */}
+<dialog
+  id="createProjectModal"
+  className="
+    fixed top-1/2 left-1/2 
+    -translate-x-1/2 -translate-y-1/2
+    backdrop:bg-black/60 backdrop-blur-sm 
+    p-0 rounded-2xl border border-[#1E253F]/70 
+    bg-gradient-to-br from-[#0F172A]/95 via-[#111827]/90 to-[#0B1120]/90 
+    text-gray-200 w-[90vw] max-w-md
+  "
+>
+  <form onSubmit={handleCreateProject} className="p-4 sm:p-6 space-y-4 sm:space-y-5">
+    <h3 className="text-base sm:text-lg font-semibold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
+      Create New Project
+    </h3>
 
-      {/* Edit Modal */}
-      <dialog
-        id="editProjectModal"
-        className="backdrop:bg-black/60 backdrop-blur-sm p-0 rounded-2xl border border-[#1E253F]/70 bg-gradient-to-br from-[#0F172A]/95 via-[#111827]/90 to-[#0B1120]/90 text-gray-200 w-[90vw] max-w-md"
+    <input
+      name="title"
+      placeholder="Project Title"
+      value={form.title}
+      onChange={(e) => setForm({ ...form, title: e.target.value })}
+      className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
+    />
+
+    <textarea
+      name="description"
+      placeholder="Description"
+      value={form.description}
+      onChange={(e) => setForm({ ...form, description: e.target.value })}
+      className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
+      rows={3}
+    />
+
+    <div className="flex justify-end gap-3 pt-2">
+      <button
+        type="button"
+        onClick={() => document.getElementById("createProjectModal").close()}
+        className="cursor-pointer px-4 py-2 rounded-lg text-sm text-gray-400 border border-[#2D3250] hover:bg-[#1E253F]/70 transition-all"
       >
-        <form onSubmit={handleEditProject} className="p-4 sm:p-6 space-y-4 sm:space-y-5">
-          <h3 className="text-base sm:text-lg font-semibold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
-            Edit Project
-          </h3>
-          <input
-            name="title"
-            placeholder="Project Title"
-            value={editForm.title}
-            onChange={(e) =>
-              setEditForm({ ...editForm, title: e.target.value })
-            }
-            className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
-          />
-          <textarea
-            name="description"
-            placeholder="Description"
-            value={editForm.description}
-            onChange={(e) =>
-              setEditForm({ ...editForm, description: e.target.value })
-            }
-            className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
-            rows={3}
-          />
-          <div className="flex justify-end gap-3 pt-2">
-            <button
-              type="button"
-              onClick={() =>
-                document.getElementById("editProjectModal").close()
-              }
-              className="cursor-pointer px-4 py-2 rounded-lg text-sm text-gray-400 border border-[#2D3250] hover:bg-[#1E253F]/70 transition-all"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="cursor-pointer px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:opacity-90 shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition-all"
-            >
-              Save Changes
-            </button>
-          </div>
-        </form>
-      </dialog>
+        Cancel
+      </button>
+
+      <button
+        type="submit"
+        className="cursor-pointer px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:opacity-90 shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition-all"
+      >
+        Create
+      </button>
+    </div>
+  </form>
+</dialog>
+
+
+
+{/* Edit Modal */}
+<dialog
+  id="editProjectModal"
+  className="
+    fixed top-1/2 left-1/2 
+    -translate-x-1/2 -translate-y-1/2
+    backdrop:bg-black/60 backdrop-blur-sm 
+    p-0 rounded-2xl border border-[#1E253F]/70 
+    bg-gradient-to-br from-[#0F172A]/95 via-[#111827]/90 to-[#0B1120]/90 
+    text-gray-200 w-[90vw] max-w-md
+  "
+>
+  <form onSubmit={handleEditProject} className="p-4 sm:p-6 space-y-4 sm:space-y-5">
+    <h3 className="text-base sm:text-lg font-semibold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
+      Edit Project
+    </h3>
+
+    <input
+      name="title"
+      placeholder="Project Title"
+      value={editForm.title}
+      onChange={(e) =>
+        setEditForm({ ...editForm, title: e.target.value })
+      }
+      className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
+    />
+
+    <textarea
+      name="description"
+      placeholder="Description"
+      value={editForm.description}
+      onChange={(e) =>
+        setEditForm({ ...editForm, description: e.target.value })
+      }
+      className="w-full p-2.5 rounded-lg bg-[#0F1629]/70 border border-[#2D3250] focus:border-[#3B82F6] outline-none text-sm text-gray-200 placeholder-gray-500"
+      rows={3}
+    />
+
+    <div className="flex justify-end gap-3 pt-2">
+      <button
+        type="button"
+        onClick={() => document.getElementById("editProjectModal").close()}
+        className="cursor-pointer px-4 py-2 rounded-lg text-sm text-gray-400 border border-[#2D3250] hover:bg-[#1E253F]/70 transition-all"
+      >
+        Cancel
+      </button>
+
+      <button
+        type="submit"
+        className="cursor-pointer px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:opacity-90 shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition-all"
+      >
+        Save Changes
+      </button>
+    </div>
+  </form>
+</dialog>
+
     </div>
   );
 };

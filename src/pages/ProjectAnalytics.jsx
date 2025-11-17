@@ -53,11 +53,11 @@ const ProjectAnalytics = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0B0C10] via-[#111827] to-[#1E2233] text-gray-200 p-8 relative overflow-hidden">
-      {/* Background glow */}
+      
       <div className="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[140px] rounded-full top-[-100px] left-[-100px]" />
       <div className="absolute w-[400px] h-[400px] bg-indigo-600/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
 
-      {/* Header */}
+      
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
         <h1 className="text-3xl font-semibold tracking-wide text-white">
           {data.project}
@@ -71,9 +71,9 @@ const ProjectAnalytics = () => {
         </Link>
       </div>
 
-      {/* Charts */}
+      
       <div className="grid md:grid-cols-2 gap-8 relative z-10">
-        {/* Task Status Overview */}
+       
         <div className="bg-[#1E2233]/80 backdrop-blur-xl border border-[#2D3250] rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.3)] hover:shadow-blue-900/30 transition-all">
           <h2 className="text-lg font-semibold text-white mb-4">
             Task Status Overview
@@ -109,7 +109,7 @@ const ProjectAnalytics = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Workload by User */}
+      
         <div className="bg-[#1E2233]/80 backdrop-blur-xl border border-[#2D3250] rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.3)] hover:shadow-blue-900/30 transition-all">
           <h2 className="text-lg font-semibold text-white mb-4">
             Workload by User
@@ -132,7 +132,7 @@ const ProjectAnalytics = () => {
         </div>
       </div>
 
-      {/* Recent Tasks */}
+      
       <div className="relative z-10 mt-10 bg-[#1E2233]/80 backdrop-blur-xl border border-[#2D3250] p-6 rounded-xl shadow-[0_0_25px_rgba(0,0,0,0.3)] hover:shadow-blue-900/30 transition-all">
         <h2 className="text-lg font-semibold text-white mb-4">
           Recent Tasks
