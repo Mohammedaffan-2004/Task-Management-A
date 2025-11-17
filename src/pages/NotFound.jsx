@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { TriangleAlert } from "lucide-react";
 
 const NotFound = () => (
-  <div className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-[#0B0C10] via-[#0F1629] to-[#111827] text-gray-200 overflow-hidden">
+  <div className="min-h-screen flex items-center justify-center relative bg-linear-to-br from-[#0B0C10] via-[#0F1629] to-[#111827] text-gray-200 overflow-hidden">
    
     <div className="absolute w-[500px] h-[500px] bg-[#3B82F6]/25 blur-[140px] rounded-full -top-24 -left-32"></div>
     <div className="absolute w-[420px] h-[420px] bg-[#06B6D4]/25 blur-[130px] rounded-full bottom-0 right-0"></div>
@@ -11,13 +11,13 @@ const NotFound = () => (
     <div className="relative z-10 text-center space-y-7 px-6">
      
       <div className="flex justify-center">
-        <div className="p-5 bg-gradient-to-br from-[#3B82F6]/15 to-[#06B6D4]/10 border border-[#3B82F6]/30 rounded-full shadow-[0_0_25px_rgba(59,130,246,0.25)] backdrop-blur-xl">
+        <div className="p-5 bg-linear-to-br from-[#3B82F6]/15 to-[#06B6D4]/10 border border-[#3B82F6]/30 rounded-full shadow-[0_0_25px_rgba(59,130,246,0.25)] backdrop-blur-xl">
           <TriangleAlert size={50} className="text-[#60A5FA]" />
         </div>
       </div>
 
     
-      <h1 className="text-7xl md:text-8xl font-extrabold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-widest drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]">
+      <h1 className="text-7xl md:text-8xl font-extrabold bg-linear-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-widest drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]">
         404
       </h1>
 
@@ -29,7 +29,7 @@ const NotFound = () => (
      
       <Link
         to="/dashboard"
-        className="inline-block bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] hover:from-[#60A5FA] hover:to-[#22D3EE] text-white px-6 py-3 rounded-lg font-medium shadow-[0_4px_20px_rgba(59,130,246,0.35)] hover:shadow-[0_6px_30px_rgba(59,130,246,0.45)] transition-all duration-300 hover:scale-[1.03]"
+        className="inline-block bg-linear-to-r from-[#3B82F6] to-[#06B6D4] hover:from-[#60A5FA] hover:to-[#22D3EE] text-white px-6 py-3 rounded-lg font-medium shadow-[0_4px_20px_rgba(59,130,246,0.35)] hover:shadow-[0_6px_30px_rgba(59,130,246,0.45)] transition-all duration-300 hover:scale-[1.03]"
       >
         Return to Dashboard
       </Link>

@@ -39,7 +39,7 @@ const Button = ({
       disabled={disabled || loading}
       className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
     >
-      {/* Loader or Icon */}
+     
       <span className="relative flex items-center justify-center z-10">
         {loading ? (
           <Loader2 className="w-4 h-4 mr-2 animate-spin text-white" />

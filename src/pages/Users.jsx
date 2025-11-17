@@ -21,18 +21,18 @@ const Users = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#0B0C10] via-[#111827] to-[#1E2233] text-gray-200 p-8 overflow-hidden">
+    <div className="relative min-h-screen bg-linear-to-br from-[#0B0C10] via-[#111827] to-[#1E2233] text-gray-200 p-8 overflow-hidden">
      
       <div className="absolute w-[500px] h-[500px] bg-[#3B82F6]/25 blur-[140px] rounded-full top-[-100px] left-[-100px]" />
       <div className="absolute w-[400px] h-[400px] bg-[#06B6D4]/25 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
 
       
       <div className="relative z-10 flex items-center gap-3 mb-10">
-        <div className="p-3 bg-gradient-to-br from-[#3B82F6]/20 to-[#06B6D4]/10 border border-[#3B82F6]/30 rounded-xl shadow-[0_0_25px_rgba(59,130,246,0.25)] backdrop-blur-xl">
+        <div className="p-3 bg-linear-to-br from-[#3B82F6]/20 to-[#06B6D4]/10 border border-[#3B82F6]/30 rounded-xl shadow-[0_0_25px_rgba(59,130,246,0.25)] backdrop-blur-xl">
           <UsersIcon size={24} className="text-[#60A5FA]" />
         </div>
         <h1 className="text-3xl font-semibold text-white tracking-wide">
-          <span className="bg-gradient-to-r from-[#3B82F6] via-[#06B6D4] to-[#22D3EE] bg-clip-text text-transparent font-bold">
+          <span className="bg-linear-to-r from-[#3B82F6] via-[#06B6D4] to-[#22D3EE] bg-clip-text text-transparent font-bold">
             Users
           </span>{" "}
           Directory
@@ -69,7 +69,7 @@ const Users = () => {
                 users.map((u, i) => (
                   <tr
                     key={u._id}
-                    className={`group border border-[#2D3250]/50 rounded-xl transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:border-[#3B82F6]/40 ${
+                    className={`group border border-[#2D3250]/50 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:border-[#3B82F6]/40 ${
                       i % 2 === 0
                         ? "bg-[#151A2D]/60"
                         : "bg-[#1B2034]/60"

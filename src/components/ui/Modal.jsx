@@ -9,7 +9,7 @@ const Modal = ({ title, isOpen, onClose, children }) => {
       onClick={onClose}
     >
       <div
-        className="relative bg-gradient-to-br from-[#0F1629]/95 via-[#111827]/90 to-[#0B1120]/90 
+        className="relative bg-linear-to-br from-[#0F1629]/95 via-[#111827]/90 to-[#0B1120]/90 
         backdrop-blur-2xl border border-[#1E253F]/70 
         rounded-2xl shadow-[0_8px_40px_rgba(59,130,246,0.25)] 
         hover:shadow-[0_12px_50px_rgba(59,130,246,0.35)]
@@ -17,11 +17,11 @@ const Modal = ({ title, isOpen, onClose, children }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glow Ring Accent */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#3B82F6]/10 via-[#06B6D4]/10 to-[#22D3EE]/10 opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-tr from-[#3B82F6]/10 via-[#06B6D4]/10 to-[#22D3EE]/10 opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700 pointer-events-none"></div>
 
         {/* Header */}
         <div className="flex justify-between items-center border-b border-[#1E253F]/60 pb-3 mb-4">
-          <h3 className="text-lg font-semibold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-wide drop-shadow-[0_0_8px_rgba(59,130,246,0.25)]">
+          <h3 className="text-lg font-semibold bg-linear-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-wide drop-shadow-[0_0_8px_rgba(59,130,246,0.25)]">
             {title}
           </h3>
           <button
@@ -33,16 +33,16 @@ const Modal = ({ title, isOpen, onClose, children }) => {
           </button>
         </div>
 
-        {/* Body */}
+       
         <div className="max-h-[65vh] overflow-y-auto pr-2 custom-scroll relative z-10 text-gray-200">
           {children}
         </div>
 
-        {/* Accent Light Effect */}
-        <div className="absolute -right-12 -bottom-12 w-40 h-40 bg-gradient-to-tr from-[#3B82F6]/25 via-[#06B6D4]/20 to-transparent blur-3xl rounded-tl-full pointer-events-none"></div>
+       
+        <div className="absolute -right-12 -bottom-12 w-40 h-40 bg-linear-to-tr from-[#3B82F6]/25 via-[#06B6D4]/20 to-transparent blur-3xl rounded-tl-full pointer-events-none"></div>
       </div>
 
-      {/* Animations + Scrollbar Styling */}
+     
       <style>{`
         @keyframes fadeIn {
           from { opacity: 0; }

@@ -58,7 +58,7 @@ const Sidebar = () => {
       {isMobile && (
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="fixed top-4 left-4 z-[60] p-2 bg-[#0F1629]/90 backdrop-blur-xl border border-[#2D3250] rounded-lg text-gray-300 hover:text-blue-400 transition-all shadow-lg"
+          className="fixed top-4 left-4 z-60 p-2 bg-[#0F1629]/90 backdrop-blur-xl border border-[#2D3250] rounded-lg text-gray-300 hover:text-blue-400 transition-all shadow-lg"
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -74,7 +74,7 @@ const Sidebar = () => {
 
     
       <aside
-        className={`fixed top-0 left-0 h-full z-50 bg-gradient-to-b from-[#0B0C10]/95 via-[#0F1629]/90 to-[#111A2D]/90 backdrop-blur-2xl border-r border-[#1E253F]/60 shadow-[8px_0_25px_rgba(0,0,0,0.5)] flex flex-col justify-between transition-all duration-300 ${
+        className={`fixed top-0 left-0 h-full z-50 bg-linear-to-b from-[#0B0C10]/95 via-[#0F1629]/90 to-[#111A2D]/90 backdrop-blur-2xl border-r border-[#1E253F]/60 shadow-[8px_0_25px_rgba(0,0,0,0.5)] flex flex-col justify-between transition-all duration-300 ${
           isMobile
             ? mobileOpen
               ? "translate-x-0 w-64"
@@ -87,7 +87,7 @@ const Sidebar = () => {
        
         <div className="flex items-center justify-between px-5 py-4 border-b border-[#1E253F]/60">
           <h2
-            className={`text-xl font-bold bg-gradient-to-r from-[#3B82F6] via-[#06B6D4] to-[#22D3EE] bg-clip-text text-transparent tracking-wide transition-all duration-300 ${
+            className={`text-xl font-bold bg-linear-to-r from-[#3B82F6] via-[#06B6D4] to-[#22D3EE] bg-clip-text text-transparent tracking-wide transition-all duration-300 ${
               collapsed && !isMobile ? "opacity-0 scale-0" : "opacity-100 scale-100"
             }`}
           >
@@ -106,7 +106,7 @@ const Sidebar = () => {
         </div>
 
        
-        <nav className="flex flex-col space-y-2 px-3 mt-6 flex-grow overflow-y-auto">
+        <nav className="flex flex-col space-y-2 px-3 mt-6 grow overflow-y-auto">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (
@@ -117,13 +117,13 @@ const Sidebar = () => {
                   collapsed && !isMobile ? "justify-center" : "gap-3"
                 } px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
                   isActive
-                    ? "bg-gradient-to-r from-[#1E3A8A]/40 to-[#1E40AF]/20 text-white border border-[#3B82F6]/40 shadow-[0_0_15px_rgba(59,130,246,0.25)]"
+                    ? "bg-linear-to-r from-[#1E3A8A]/40 to-[#1E40AF]/20 text-white border border-[#3B82F6]/40 shadow-[0_0_15px_rgba(59,130,246,0.25)]"
                     : "text-gray-400 hover:text-white hover:bg-[#1E253F]/60"
                 }`}
               >
                
                 {isActive && (
-                  <span className="absolute left-0 top-0 h-full w-[3px] rounded-r-full bg-gradient-to-b from-[#3B82F6] to-[#06B6D4] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+                  <span className="absolute left-0 top-0 h-full w-[3px] rounded-r-full bg-linear-to-b from-[#3B82F6] to-[#06B6D4] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
                 )}
 
                 <span

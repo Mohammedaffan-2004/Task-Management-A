@@ -152,7 +152,7 @@ const Tasks = () => {
             <CheckCircle2 size={18} className="text-blue-300" />
             <span className="text-sm">{toast}</span>
             <button onClick={() => setToast(null)}>
-              <X size={16} className="text-gray-300 hover:text-white" />
+              <X size={16} className="text-gray-300 hover:text-white cursor-pointer" />
             </button>
           </div>
         </div>
@@ -290,7 +290,7 @@ const Tasks = () => {
     onClick={() => handleMarkCompleted(task._id)}
     disabled={task.status === "Done"}
     className={`
-      flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-300 border shadow-sm
+             cursor-pointer flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-300 border shadow-sm
       ${task.status === "Done"
         ? "bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-500 border-green-400 cursor-default"
         : "bg-gradient-to-r from-yellow-400/20 to-amber-400/20 text-amber-500 border-amber-400 hover:shadow-lg hover:scale-105 cursor-pointer"

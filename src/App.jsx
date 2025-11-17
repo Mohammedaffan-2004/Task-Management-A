@@ -16,14 +16,14 @@ import Layout from "./components/layout/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const LoadingScreen = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-[#0b1120] via-[#0f172a] to-[#111827] relative overflow-hidden text-gray-300">
+  <div className="flex flex-col items-center justify-center min-h-screen bg-linear-to-br from-[#0b1120] via-[#0f172a] to-[#111827] relative overflow-hidden text-gray-300">
    
-    <div className="absolute w-[24rem] h-[24rem] bg-[#3B82F6]/25 blur-3xl rounded-full -top-16 -left-20 animate-float"></div>
-    <div className="absolute w-[22rem] h-[22rem] bg-[#06B6D4]/25 blur-3xl rounded-full bottom-0 right-0 animate-float-delay"></div>
+    <div className="absolute w-96 h-96 bg-[#3B82F6]/25 blur-3xl rounded-full -top-16 -left-20 animate-float"></div>
+    <div className="absolute w-88 h-88 bg-[#06B6D4]/25 blur-3xl rounded-full bottom-0 right-0 animate-float-delay"></div>
 
     
     <div className="relative z-10 flex flex-col items-center gap-3 animate-fadeIn">
-      <h1 className="text-5xl font-extrabold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-wide animate-pulse">
+      <h1 className="text-5xl font-extrabold bg-linear-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-wide animate-pulse">
        NexTask
       </h1>
       <p className="text-sm text-gray-400 tracking-wide">
@@ -32,7 +32,7 @@ const LoadingScreen = () => (
 
     
       <div className="mt-4 w-40 h-1.5 rounded-full bg-[#1E253F]/50 overflow-hidden">
-        <div className="w-1/3 h-full bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] animate-loadingBar"></div>
+        <div className="w-1/3 h-full bg-linear-to-r from-[#3B82F6] to-[#06B6D4] animate-loadingBar"></div>
       </div>
     </div>
 

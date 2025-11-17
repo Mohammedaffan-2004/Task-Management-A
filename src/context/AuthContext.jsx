@@ -48,10 +48,7 @@ export const AuthProvider = ({ children }) => {
     setAuthLoading(true);
     try {
       const res = await axios.post("/auth/login", credentials);
-      
-      // ✅ Backend returns { token, user }
-      // Token is already stored in httpOnly cookie by backend
-      // We only need to store user data in localStorage
+   
       const { user: userObj } = res.data;
       
       localStorage.setItem("user", JSON.stringify(userObj));

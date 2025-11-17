@@ -126,7 +126,7 @@ const Register = () => {
                 <input
                   name="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Hassan ur rahman"
                   value={form.name}
                   onChange={handleChange}
                   disabled={loading}

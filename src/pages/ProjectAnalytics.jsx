@@ -52,7 +52,7 @@ const ProjectAnalytics = () => {
   }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0B0C10] via-[#111827] to-[#1E2233] text-gray-200 p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-linear-to-br from-[#0B0C10] via-[#111827] to-[#1E2233] text-gray-200 p-8 relative overflow-hidden">
       
       <div className="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[140px] rounded-full top-[-100px] left-[-100px]" />
       <div className="absolute w-[400px] h-[400px] bg-indigo-600/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
@@ -65,7 +65,7 @@ const ProjectAnalytics = () => {
         </h1>
         <Link
           to="/projects"
-          className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-500 hover:opacity-90 px-4 py-2 rounded-lg text-sm font-medium text-white shadow-md shadow-blue-900/40 transition-all"
+          className="flex items-center gap-2 bg-linear-to-r from-blue-600 to-indigo-500 hover:opacity-90 px-4 py-2 rounded-lg text-sm font-medium text-white shadow-md shadow-blue-900/40 transition-all"
         >
           <ArrowLeft size={16} /> Back to Projects
         </Link>

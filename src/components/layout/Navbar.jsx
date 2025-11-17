@@ -36,7 +36,7 @@ const Navbar = () => {
        
         <h1
           onClick={() => navigate("/dashboard")}
-          className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-wide cursor-pointer select-none flex-shrink-0"
+          className="text-xl sm:text-2xl font-bold bg-linear-to-r from-[#60A5FA] via-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent tracking-wide cursor-pointer select-none shrink-0"
         >
          NexTask
         </h1>
@@ -52,7 +52,7 @@ const Navbar = () => {
               onClick={() => setOpen(!open)}
               className="cursor-pointer flex items-center gap-2 bg-[#1E253F]/70 hover:bg-[#2A3150]/80 border border-[#2D3250] hover:border-blue-500/50 rounded-lg px-2 sm:px-3 py-1.5 transition-all"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] flex items-center justify-center text-white text-sm font-semibold shadow-[0_0_10px_rgba(59,130,246,0.4)] flex-shrink-0">
+              <div className="w-8 h-8 rounded-full bg-linear-to-r from-[#3B82F6] to-[#06B6D4] flex items-center justify-center text-white text-sm font-semibold shadow-[0_0_10px_rgba(59,130,246,0.4)] shrink-0">
                 {user?.name?.charAt(0).toUpperCase() || "U"}
               </div>
               
